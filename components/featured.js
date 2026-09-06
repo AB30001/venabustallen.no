@@ -80,7 +80,7 @@ export default function Featured({ post, pathPrefix }) {
                       )}
                     </time>
                     <span className="text-white">
-                      · {post.estReadingTime || "5"} min read
+                      · {post.estReadingTime || "5"} min lesing
                     </span>
                   </div>
                 </div>

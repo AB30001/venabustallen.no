@@ -48,7 +48,7 @@ export default function About({ about }) {
       )}
 
       <div className="mx-auto mt-12 max-w-screen-md text-center">
-        <Button href="/contact">Get in touch</Button>
+        <Button href="/contact">Ta kontakt</Button>
       </div>
     </Container>
   );

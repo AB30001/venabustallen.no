@@ -23,14 +23,14 @@ export default function AuthorCard({ author }) {
         </div>
         <div>
           <h3 className="font-display text-sm font-semibold uppercase tracking-brand text-accent">
-            About {author.name}
+            Om {author.name}
           </h3>
           <div className="mt-3 prose-venabu text-sm">
             {author.bio && <PortableText value={author.bio} />}
           </div>
           <div className="mt-4">
             <Link href={`/author/${author.slug.current}`} className="btn-pill !px-5 !py-2">
-              View Profile
+              Se profil
             </Link>
           </div>
         </div>

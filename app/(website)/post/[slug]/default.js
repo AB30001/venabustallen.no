@@ -60,7 +60,7 @@ export default function Post(props) {
                       "dd.MM.yyyy"
                     )}
                   </time>
-                  <span>· {post.estReadingTime || "5"} min read</span>
+                  <span>· {post.estReadingTime || "5"} min lesing</span>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function Post(props) {
           </div>
           <div className="mb-10 mt-10 flex justify-center">
             <Link href="/" className="btn-pill">
-              ← View all posts
+              ← Se alle innlegg
             </Link>
           </div>
           {post.author && <AuthorCard author={post.author} />}

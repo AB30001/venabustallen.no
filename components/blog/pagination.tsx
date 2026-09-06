@@ -35,13 +35,13 @@ export default function Pagination({
           onClick={handlePrevPage}
           className="btn-pill disabled:pointer-events-none disabled:opacity-40">
           <ChevronLeftIcon className="mr-1 h-3 w-3" aria-hidden="true" />
-          <span>Previous</span>
+          <span>Forrige</span>
         </button>
         <button
           onClick={handleNextPage}
           disabled={isLastPage}
           className="btn-pill disabled:pointer-events-none disabled:opacity-40">
-          <span>Next</span>
+          <span>Neste</span>
           <ChevronRightIcon className="ml-1 h-3 w-3" aria-hidden="true" />
         </button>
       </nav>

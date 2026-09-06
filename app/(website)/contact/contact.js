@@ -85,7 +85,7 @@ export default function Contact({ settings }) {
             <div className="mb-5">
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="Fullt navn"
                 autoComplete="false"
                 className={`w-full border bg-paper px-4 py-3 font-sans outline-none transition focus:ring-2 ${
                   errors.name
@@ -93,7 +93,7 @@ export default function Contact({ settings }) {
                     : "border-line focus:border-charcoal focus:ring-mist"
                 }`}
                 {...register("name", {
-                  required: "Full name is required",
+                  required: "Fullt navn er påkrevd",
                   maxLength: 80
                 })}
               />
@@ -111,7 +111,7 @@ export default function Contact({ settings }) {
               <input
                 id="email_address"
                 type="email"
-                placeholder="Email Address"
+                placeholder="E-postadresse"
                 name="email"
                 autoComplete="false"
                 className={`w-full border bg-paper px-4 py-3 font-sans outline-none transition focus:ring-2 ${
@@ -120,10 +120,10 @@ export default function Contact({ settings }) {
                     : "border-line focus:border-charcoal focus:ring-mist"
                 }`}
                 {...register("email", {
-                  required: "Enter your email",
+                  required: "Skriv inn e-postadressen din",
                   pattern: {
                     value: /^\S+@\S+$/i,
-                    message: "Please enter a valid email"
+                    message: "Skriv inn en gyldig e-postadresse"
                   }
                 })}
               />
@@ -137,14 +137,14 @@ export default function Contact({ settings }) {
             <div className="mb-3">
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder="Din melding"
                 className={`h-36 w-full border bg-paper px-4 py-3 font-sans outline-none transition focus:ring-2 ${
                   errors.message
                     ? "border-red-600 ring-red-100"
                     : "border-line focus:border-charcoal focus:ring-mist"
                 }`}
                 {...register("message", {
-                  required: "Enter your Message"
+                  required: "Skriv inn meldingen din"
                 })}
               />
               {errors.message && (
@@ -175,19 +175,19 @@ export default function Contact({ settings }) {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
               ) : (
-                "Send Message"
+                "Send melding"
               )}
             </button>
           </form>
 
           {isSubmitSuccessful && isSuccess && (
             <div className="mt-3 text-sm text-center text-green-500">
-              {message || "Success. Message sent successfully"}
+              {message || "Takk! Meldingen er sendt."}
             </div>
           )}
           {isSubmitSuccessful && !isSuccess && (
             <div className="mt-3 text-sm text-center text-red-500">
-              {message || "Something went wrong. Please try later."}
+              {message || "Noe gikk galt. Prøv igjen senere."}
             </div>
           )}
         </div>

@@ -44,7 +44,7 @@ export default function Post({ posts }) {
             </p>
             <div className="mt-10 flex flex-col items-center gap-4">
               <div className="rule" />
-              <Button href="/archive">View all Posts</Button>
+              <Button href="/archive">Se alle innlegg</Button>
               <div className="rule" />
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Post({ posts }) {
                 ))}
               </div>
               <div className="mt-5 text-center lg:text-left">
-                <Button href="/archive">View all Posts</Button>
+                <Button href="/archive">Se alle innlegg</Button>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Post({ posts }) {
               </div>
               <div className="mt-14 flex justify-center">
                 <Link href="/archive" className="btn-pill">
-                  View all Posts
+                  Se alle innlegg
                 </Link>
               </div>
             </div>
