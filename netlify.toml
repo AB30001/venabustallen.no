@@ -1,0 +1,17 @@
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Set in Netlify UI (Site settings → Environment variables):
+# NEXT_PUBLIC_SANITY_PROJECT_ID=thxhf26m
+# NEXT_PUBLIC_SANITY_DATASET=production
+# NEXT_PUBLIC_SITE_URL=https://venabustallen.no
+# NEXT_PUBLIC_WEB3FORMS_KEY=<web3forms access key>
+# SANITY_REVALIDATE_SECRET=<random secret>
+# SANITY_API_READ_TOKEN or SANITY_API_WRITE_TOKEN if dataset is private

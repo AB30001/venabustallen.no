@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*! purgecss start ignore */
+@import "prism.css";
+/*! purgecss end ignore */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    background-color: #cbdfe0;
+    color: #2c2824;
+  }
+}
+
+@layer components {
+  .btn-pill {
+    @apply inline-flex items-center justify-center rounded-full border border-charcoal px-7 py-2.5 text-xs font-display font-semibold uppercase tracking-brand text-charcoal transition-colors duration-200 hover:bg-charcoal hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .btn-pill-light {
+    @apply inline-flex items-center justify-center rounded-full border border-white px-7 py-2.5 text-xs font-display font-semibold uppercase tracking-brand text-white transition-colors duration-200 hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .btn-pill-accent {
+    @apply inline-flex items-center justify-center rounded-full border border-accent bg-accent px-7 py-2.5 text-xs font-display font-semibold uppercase tracking-brand text-white transition-colors duration-200 hover:bg-transparent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .rule {
+    @apply mx-auto h-px w-16 bg-line;
+  }
+
+  .section-y {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-display {
+    @apply font-display text-3xl font-bold uppercase tracking-wide text-charcoal md:text-4xl lg:text-5xl;
+  }
+
+  .heading-section {
+    @apply font-display text-2xl font-bold uppercase tracking-wide text-charcoal md:text-3xl;
+  }
+
+  .text-accent-name {
+    @apply font-display text-sm font-semibold uppercase tracking-brand text-accent;
+  }
+
+  .prose-venabu {
+    @apply prose max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-charcoal prose-p:font-sans prose-p:text-ink prose-a:font-medium prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-blockquote:border-accent prose-blockquote:font-serif prose-blockquote:text-xl prose-blockquote:italic prose-blockquote:text-charcoal prose-strong:text-charcoal;
+  }
+}
