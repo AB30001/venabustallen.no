@@ -367,7 +367,7 @@ async function seed() {
     copyright: "Venabustallen",
     description:
       "Rideturer, rideferier og stallhistorier fra Venabygdsfjellet. Dølahester, fjellridning og opplevelser ved Rondane.",
-    email: "info@venebustallen.no",
+    email: "info@venabustallen.no",
     w3ckey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || undefined
   });
 

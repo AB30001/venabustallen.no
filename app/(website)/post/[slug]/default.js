@@ -19,6 +19,9 @@ export default function Post(props) {
 
   const imageProps = getPostImage(post);
   const AuthorimageProps = getAuthorImage(post?.author);
+  const related = (post?.related || []).filter(
+    item => item?.slug?.current && item.slug.current !== slug?.current
+  );
 
   return (
     <>
@@ -87,12 +90,47 @@ export default function Post(props) {
             {post.body && <PortableText value={post.body} />}
           </div>
           <div className="mb-10 mt-10 flex justify-center">
-            <Link href="/" className="btn-pill">
+            <Link href="/archive" className="btn-pill">
               ← Se alle innlegg
             </Link>
           </div>
           {post.author && <AuthorCard author={post.author} />}
         </article>
+
+        {related.length > 0 && (
+          <aside className="mx-auto mt-16 max-w-screen-md border-t border-line pt-12">
+            <h2 className="font-display text-sm font-semibold uppercase tracking-brand text-charcoal">
+              Relaterte artikler
+            </h2>
+            <ul className="mt-6 grid gap-6 sm:grid-cols-3">
+              {related.slice(0, 3).map(item => {
+                const thumb = getPostImage(item);
+                return (
+                  <li key={item._id || item.slug.current}>
+                    <Link
+                      href={`/post/${item.slug.current}`}
+                      className="group block">
+                      {thumb && (
+                        <div className="relative aspect-[4/3] overflow-hidden">
+                          <Image
+                            src={thumb.src}
+                            alt={item.title || ""}
+                            fill
+                            sizes="(max-width: 640px) 100vw, 33vw"
+                            className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                          />
+                        </div>
+                      )}
+                      <p className="mt-3 font-display text-sm font-semibold uppercase tracking-wide text-charcoal group-hover:text-accent">
+                        {item.title}
+                      </p>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </aside>
+        )}
       </Container>
     </>
   );

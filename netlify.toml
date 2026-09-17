@@ -8,6 +8,55 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Legacy WordPress paths → current site (preserve backlink equity)
+[[redirects]]
+  from = "/rideferier"
+  to = "/archive"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rideferier/"
+  to = "/archive"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rideturer-instruksjon-leierunder"
+  to = "/archive"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rideturer-instruksjon-leierunder/"
+  to = "/archive"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kanefart-og-kjoreturer"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kanefart-og-kjoreturer/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kontakt"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kontakt/"
+  to = "/contact"
+  status = 301
+  force = true
+
 # Set in Netlify UI (Site settings → Environment variables):
 # NEXT_PUBLIC_SANITY_PROJECT_ID=thxhf26m
 # NEXT_PUBLIC_SANITY_DATASET=production

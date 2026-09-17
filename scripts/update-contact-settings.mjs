@@ -11,7 +11,7 @@ const client = createClient({
   useCdn: false
 });
 
-const email = "info@venebustallen.no";
+const email = "info@venabustallen.no";
 const w3ckey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
 const doc = await client

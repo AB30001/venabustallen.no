@@ -49,7 +49,9 @@ export default function Contact({ settings }) {
         Kontakt
       </h1>
       <div className="mt-4 text-center">
-        <p className="font-serif text-lg italic text-muted">Vi hjelper deg gjerne med spørsmål om ridning og opphold.</p>
+        <p className="font-serif text-lg italic text-muted">
+          Spørsmål om hesteraser eller nettstedet? Vi svarer gjerne.
+        </p>
       </div>
 
       <div className="my-12 grid gap-10 md:grid-cols-2">
@@ -58,17 +60,17 @@ export default function Contact({ settings }) {
             Kontakt {SITE_NAME}
           </h2>
           <p className="mt-5 max-w-sm leading-relaxed text-ink">
-            Har du spørsmål om rideturer eller rideferier? Fyll ut skjemaet
-            eller send oss en e-post.
+            Har du spørsmål om hesteraser, artikler eller nettstedet? Fyll ut
+            skjemaet eller send oss en e-post.
           </p>
 
           <div className="mt-5">
             <div className="mt-2 flex items-center space-x-2 text-muted">
               <EnvelopeIcon className="h-4 w-4" />
               <a
-                href="mailto:info@venebustallen.no"
+                href="mailto:info@venabustallen.no"
                 className="text-accent hover:underline">
-                info@venebustallen.no
+                info@venabustallen.no
               </a>
             </div>
           </div>
