@@ -61,13 +61,19 @@ export default function PrivacyPage() {
           for markedsføring.
         </p>
 
-        <h2>Informasjonskapsler</h2>
+        <h2>Informasjonskapsler og statistikk</h2>
         <p>
           Vi bruker nødvendige informasjonskapsler for drift av nettstedet
-          (for eksempel tema/preferanser). Eventuelle ikke-nødvendige
-          informasjonskapsler (analyse, innebygde tredjepartsskript) lastes
-          først etter at du har gitt samtykke via informasjonskapsel-banneret.
-          Du kan endre valget via lenken «Informasjonskapsler» i bunnteksten.
+          (for eksempel tema/preferanser). Etter samtykke lastes anonym
+          besøksstatistikk via{" "}
+          <a
+            href="https://www.goatcounter.com"
+            target="_blank"
+            rel="noopener noreferrer">
+            GoatCounter
+          </a>
+          . Du kan endre valget via lenken «Informasjonskapsler» i
+          bunnteksten.
         </p>
         <p>
           {SITE_DESCRIPTION}
