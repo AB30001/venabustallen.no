@@ -3,7 +3,6 @@ import JsonLd from "@/components/json-ld";
 import Breadcrumbs from "@/components/breadcrumbs";
 import {
   SITE_NAME,
-  SITE_DESCRIPTION,
   absoluteUrl,
   buildWebPageJsonLd,
   buildBreadcrumbJsonLd
@@ -61,28 +60,26 @@ export default function PrivacyPage() {
           for markedsføring.
         </p>
 
-        <h2>Informasjonskapsler og statistikk</h2>
+        <h2>Besøksstatistikk</h2>
         <p>
-          Vi bruker nødvendige informasjonskapsler for drift av nettstedet
-          (for eksempel tema/preferanser). Etter samtykke lastes anonym
-          besøksstatistikk via{" "}
+          Vi bruker cookieless, personvernvennlig analyse via{" "}
           <a
             href="https://www.goatcounter.com"
             target="_blank"
             rel="noopener noreferrer">
             GoatCounter
-          </a>
-          . Du kan endre valget via lenken «Informasjonskapsler» i
-          bunnteksten.
-        </p>
-        <p>
-          {SITE_DESCRIPTION}
+          </a>{" "}
+          for å måle anonymisert, aggregert trafikkinformasjon. Behandlingen
+          skjer med grunnlag i berettiget interesse (legitimate interest) for å
+          forstå hvordan nettstedet brukes og forbedre innholdet. Vi setter ikke
+          analyse-informasjonskapsler, og det kreves ikke samtykke for denne
+          statistikken.
         </p>
 
-        <h2>Dine rettigheter (GDPR)</h2>
+        <h2>Dine rettigheter</h2>
         <p>
-          Etter GDPR har du rett til innsyn, retting og sletting av
-          personopplysninger vi behandler om deg. Ta kontakt via{" "}
+          For personopplysninger du sender oss via kontaktskjemaet har du rett
+          til innsyn, retting og sletting. Ta kontakt via{" "}
           <a href="/contact">kontaktsiden</a>.
         </p>
 

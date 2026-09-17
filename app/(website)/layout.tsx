@@ -1,7 +1,6 @@
 import { getSettings, getTopCategories } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import CookieBanner from "@/components/cookie-banner";
 import GoatCounter from "@/components/goatcounter";
 import JsonLd from "@/components/json-ld";
 import {
@@ -84,7 +83,6 @@ export default async function Layout({ children }) {
       <div>{children}</div>
 
       <Footer {...settings} />
-      <CookieBanner />
       <GoatCounter />
     </>
   );

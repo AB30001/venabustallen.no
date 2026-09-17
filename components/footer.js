@@ -1,5 +1,3 @@
-"use client";
-
 import Container from "@/components/container";
 import Link from "next/link";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/seo";
@@ -16,20 +14,6 @@ export default function Footer(props) {
           <Link href="/privacy" className="hover:text-accent-soft">
             Personvern
           </Link>
-          <span aria-hidden="true" className="text-white/40">
-            |
-          </span>
-          <button
-            type="button"
-            data-cookie-settings
-            className="hover:text-accent-soft"
-            onClick={() => {
-              if (typeof window !== "undefined") {
-                window.dispatchEvent(new CustomEvent("open-cookie-settings"));
-              }
-            }}>
-            Informasjonskapsler
-          </button>
           <span aria-hidden="true" className="text-white/40">
             |
           </span>
