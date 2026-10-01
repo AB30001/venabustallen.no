@@ -43,38 +43,50 @@ export default function NavbarAlt(props) {
               <div className="flex flex-wrap justify-between md:gap-10 lg:flex-nowrap">
                 <div className="flex w-full items-center justify-between lg:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      <Image
-                        src={urlForImage(props.logo)}
-                        alt={SITE_NAME}
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <Image
-                        src={LogoImg}
-                        alt={SITE_NAME}
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    )}
+                    {(() => {
+                      const logo = props.logo ? urlForImage(props.logo) : null;
+                      return logo?.src ? (
+                        <Image
+                          src={logo.src}
+                          alt={SITE_NAME}
+                          priority={true}
+                          sizes="(max-width: 640px) 100vw, 200px"
+                          width={logo.width || 200}
+                          height={logo.height || 60}
+                        />
+                      ) : (
+                        <Image
+                          src={LogoImg}
+                          alt={SITE_NAME}
+                          priority={true}
+                          sizes="(max-width: 640px) 100vw, 200px"
+                        />
+                      );
+                    })()}
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
-                      <Image
-                        src={urlForImage(props.logoalt)}
-                        alt={SITE_NAME}
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <Image
-                        src={LogoImg}
-                        alt={SITE_NAME}
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    )}
+                    {(() => {
+                      const logo = props.logoalt
+                        ? urlForImage(props.logoalt)
+                        : null;
+                      return logo?.src ? (
+                        <Image
+                          src={logo.src}
+                          alt={SITE_NAME}
+                          priority={true}
+                          sizes="(max-width: 640px) 100vw, 200px"
+                          width={logo.width || 200}
+                          height={logo.height || 60}
+                        />
+                      ) : (
+                        <Image
+                          src={LogoImg}
+                          alt={SITE_NAME}
+                          priority={true}
+                          sizes="(max-width: 640px) 100vw, 200px"
+                        />
+                      );
+                    })()}
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"

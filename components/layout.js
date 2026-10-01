@@ -12,11 +12,14 @@ import Footer from "@/components/footer";
 
 export default function Layout(props) {
   const { children } = props;
-  const ogimage = urlForImage(props?.openGraphImage) ?? "";
+  const og = urlForImage(props?.openGraphImage);
+  const ogimage = og?.src ?? "";
   return (
     <>
       <Head>
-        {/* Assets are served from /public — no remote image CDN preconnect */}
+        {ogimage ? (
+          <link rel="preconnect" href="https://cdn.sanity.io" />
+        ) : null}
       </Head>
       <NextSeo
         title={props.title}
@@ -29,8 +32,8 @@ export default function Layout(props) {
           images: [
             {
               url: ogimage,
-              width: 800,
-              height: 600,
+              width: og?.width || 800,
+              height: og?.height || 600,
               alt: props.title
             }
           ],

@@ -17,10 +17,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = await getPostBySlug(params.slug);
-  const local = getPostImage(post);
-  const imageUrl = local?.src
-    ? absoluteUrl(local.src)
-    : absoluteUrl("/opengraph-image");
+  const image = getPostImage(post);
+  const imageUrl = image?.src || absoluteUrl("/opengraph-image");
   const canonical = absoluteUrl(`/post/${post.slug?.current}`);
 
   return {
@@ -50,10 +48,8 @@ export async function generateMetadata({ params }) {
 export default async function PostDefault({ params }) {
   const post = await getPostBySlug(params.slug);
 
-  const local = getPostImage(post);
-  const imageUrl = local?.src
-    ? absoluteUrl(local.src)
-    : absoluteUrl("/opengraph-image");
+  const image = getPostImage(post);
+  const imageUrl = image?.src || absoluteUrl("/opengraph-image");
 
   const category = post.categories?.[0];
   const crumbs = [

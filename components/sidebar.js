@@ -51,13 +51,15 @@ function RelatedPosts({ related, pathPrefix }) {
               }`}>
               <div className="flex gap-5">
                 <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-md">
-                  <Image
-                    src={imageProps.src}
-                    alt={item.title || "Thumbnail"}
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                  />
+                  {imageProps?.src && (
+                    <Image
+                      src={imageProps.src}
+                      alt={item.title || "Thumbnail"}
+                      fill
+                      sizes="100vw"
+                      className="object-cover"
+                    />
+                  )}
                 </div>
                 <div>
                   <h3 className="font-medium dark:text-white">

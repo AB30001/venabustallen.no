@@ -5,7 +5,7 @@ import Image from "next/image";
 import Button from "@/components/ui/button";
 
 export default function About({ about }) {
-  const imageProps = about ? getAboutImage() : null;
+  const imageProps = about ? getAboutImage(about) : null;
 
   return (
     <Container>
